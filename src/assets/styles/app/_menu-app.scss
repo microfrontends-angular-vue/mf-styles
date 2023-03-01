@@ -1,0 +1,152 @@
+@import "../variables";
+
+.#{$app-prefix-menu}-container {
+    background-color: var(--panel-menu-background-color);
+    height: $vh-100;
+    position: absolute;
+    transition: all 0.2s ease-in;
+    top: 0;
+    width: $vw-100;
+    z-index: $panel-menu-z-index;
+
+    .nav-links {
+        flex: 1;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 0;
+
+        .nav-link {
+            padding-left: 0.5em;
+
+            .nav-link-a {
+                border-top-left-radius: 1.5em;
+                border-bottom-left-radius: 1.5em;
+                color: $white;
+                display: block;
+                font-weight: bold;
+                min-width: $per-100;
+                padding: 0.8em 0.5em;
+                text-decoration: none;
+                transition: all 0.3s ease-in;
+
+                .nav-icon {
+                    transform: scale(1.2);
+                }
+
+                .nav-label {
+                    padding: 0 1.5em;
+                    font-size: 0.9em;
+                }
+
+                &.selected {
+                    background-color: var(--panel-menu-item-selected-background-color);
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    color: var(--panel-menu-item-selected-font-color);
+
+                    &:hover {
+                        background-color: var(--panel-menu-item-selected-background-color);
+                        color: var(--panel-menu-item-selected-font-color);
+                    }
+
+                    .nav-link-item {
+                        .chevron-arrow {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--panel-logo-background-color);
+                }
+
+                .nav-link-item {
+                    align-items: center;
+                    display:flex;
+                    justify-content: space-between;
+    
+                    .chevron-arrow {
+                        transition: transform 0.25s ease-in;
+                        margin-right: $pix-10;                        
+                    }
+                }
+            }
+
+            .container-childs {
+                transition: all 0.25s ease-in;
+                height: 0px;
+                overflow: hidden;
+
+                &.open {
+                    height: auto;
+                    background-color: var(--panel-menu-item-selected-background-color);
+
+                    .nav-links-child {
+                        .nav-link-child {
+                            .nav-link-child-a {
+                                color: var(--panel-menu-item-selected-font-color);
+                            }
+                        }
+                    }                    
+                }
+
+                .nav-links-child {
+                    margin: 0;
+                    overflow: hidden;
+                    padding: 0;
+
+                    .nav-link-child {
+                        .nav-link-child-a {
+                            color: $white;
+                            display: block;
+                            font-weight: bold;
+                            min-width: $pix-200;
+                            text-decoration: none;
+                            padding: 0.5em 0.8em;
+
+                            .nav-child-icon {
+                                transform: scale(0.8);
+                            }
+            
+                            .nav-child-label {
+                                padding: 0 1.5em;
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &.short {
+        width: 0px;
+    }
+}
+
+@media (min-width: $resolution-35em) {
+    .#{$app-prefix-menu}-container {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        width: $panel-menu-width;
+
+        .nav-links {
+            .nav-link {
+                .nav-link-a {
+                    min-width: $pix-200;
+                }
+            }
+        }
+
+        &.short {
+            width: $panel-menu-short-width;
+        }
+
+        &:hover {
+            width: $panel-menu-width;
+        }
+    }
+}

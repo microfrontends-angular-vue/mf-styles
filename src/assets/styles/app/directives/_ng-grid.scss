@@ -1,0 +1,86 @@
+@import '../../variables';
+
+table[ngGRid] {
+    background-color: rgba(var(--panel-ng-grid-table-background-color));
+    border-top-left-radius: $pix-16;
+    border-top-right-radius: $pix-16;
+    border-spacing: 0;
+
+    thead {
+        display: none;
+        tr {
+            th {
+                padding: 1em 0.5em;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
+    tbody {
+        background-color: $white;
+        tr {
+            border: $pix-2 solid rgba(var(--panel-ng-grid-table-background-color));
+            display: flex;
+            flex-direction: column;
+            margin: 0.5em 0;
+
+            .theadrow {
+                background-color: rgba(var(--panel-ng-grid-table-background-color));
+                padding: 0.2em;
+                margin-right: 0.5em;
+                min-width: $pix-100;
+                max-width: $pix-100;
+                word-break: break-all;
+            }
+
+            td {
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+                font-size: 0.9em;
+
+                .icon-normal {
+                    color: var(--panel-ng-grid-table-tbody-normal-icon-color);
+                }
+                
+                .icon-remove {
+                    color: var(--panel-ng-grid-table-tbody-remove-icon-color)
+                }
+
+                a {
+                    margin: 0 0.5em;
+                    em {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: $resolution-35em) {
+    table[ngGRid] {
+        border-spacing: $pix-2;
+        thead {
+            display: table-header-group;
+        }
+        tbody {
+            tr {
+                border: 0px;
+                display: table-row;
+
+                .theadrow {
+                    display: none;
+                    margin-right: 0;
+                }
+
+                td {
+                    display: table-cell;
+                    text-align: center;
+                    padding: 0.3em 0;
+                }
+            }
+        }
+    }
+}

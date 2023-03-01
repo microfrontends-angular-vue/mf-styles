@@ -1,0 +1,30 @@
+@import '../variables';
+
+main {
+    display: flex;
+    flex-direction: row;
+
+    .side-right {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: $vh-100;
+
+        .content {
+            background-color: var(--panel-container-app-background-color);
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 0.5em;
+        }
+    }
+}
+
+@media (min-width: $resolution-35em) {
+    main {
+        .side-right {
+            .content {
+                padding: var(--panel-container-app-padding);
+            }
+        }
+    }
+}

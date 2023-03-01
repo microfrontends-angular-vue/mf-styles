@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables';
+@import './assets/styles/storybook/styles';
+@import './assets/styles/app/layout';
+@import './assets/styles/app/menu-app';
+@import './assets/styles/app/header-app';
+@import './assets/styles/app/directives/ng-grid';
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url('https://fonts.cdnfonts.com/css/baloo-bhai-2');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+html {
+    margin: 0;
+    --font-baloo-2: 'Baloo Bhai 2';
+    --font-roboto: Roboto;
+
+    --scroll-background-color: rgba(0,0,0,.2);
+
+    --panel-container-app-background-color: #fafafa;
+    --panel-container-app-padding: 1.875em;
+
+    /*START MF-MENU*/
+    --panel-menu-background-color: #7F1974;
+
+    --panel-menu-item-selected-background-color: #EEEEEE;
+    --panel-menu-item-selected-font-color: #7F1974;
+    
+    --panel-logo-background-color: #701666;
+    --panel-logo-option-background-color: #fff;
+    /*END MF-MENU*/
+
+    /*START MF-HEADER*/
+    --panel-header-app-height: 60px;
+    
+    --panel-header-app-background-color: #F7931E;    
+    --panel-header-app-icon-color: #fff;
+    --panel-header-app-icon-menu-font-color: #F7931E;
+    --panel-header-app-text-font-color: #fff;    
+    --panel-phone-chat-border-color: rgba(0,0,0, 0.1);
+    /*END MF-HEADER*/
+
+
+    /*START MF-ADVERTISING*/
+    //panel-header-description
+    --panel-header-description-background-color: #fff;
+    --panel-header-description-border-left-color: #F7931E;
+    --panel-header-description-text-font-color: #F7931E;
+
+    //panel-ng-card
+    --panel-ng-card-background-color: #fff;
+    --panel-ng-card-title-font-color: #F7931E;
+    --panel-ng-card-title-switch-background-color: #F7931E; 
+
+    --panel-ng-card-box-shadow-color-1: rgba(82, 63, 104, .06);
+    --panel-ng-card-box-shadow-color-2: rgba(82, 63, 104, .04);
+    --panel-ng-card-box-shadow-color-3: rgba(82, 63, 104, .04);
+
+    //panel-summary-data-general
+    --panel-summary-data-general-font-color: #0000008A;
+    --panel-summary-data-general-icon-color: #7F1974;
+
+    //panel-summary-current-state
+    --panel-summary-current-state-right-state-action-circle-background-color: #fff;
+    --panel-summary-current-state-right-state-action-circle-icon-color: #F7931E;
+    --panel-summary-current-state-left-options-action-circle-background-color: #C4C4C4;
+    --panel-summary-current-state-left-options-action-circle-icon-color: #fff;
+    --panel-summary-current-state-left-options-action-select-circle-background-color: #F7931E;
+
+    //panel-ng-grid
+    --panel-ng-grid-table-background-color: 196, 196, 196, 0.2;
+    --panel-ng-grid-table-tbody-normal-icon-color: #F7931E;
+    --panel-ng-grid-table-tbody-remove-icon-color: #ED1C24;
+    /*END MF-ADVERTISING*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, button {
+    margin: 0;
+    font-family: var(--font-baloo-2), Roboto, sans-serif;
+}
+
+::-webkit-scrollbar {
+    height: $pix-5;
+    width: $pix-5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-background-color);
+}
+
+.image-fit-container {
+    height: $per-100;
+    width: $per-100;
+}
+
+.full-width {
+    width: $per-100;
+}
