@@ -2,6 +2,9 @@
 
 <p style='text-align: justify;'> Este proyecto es un microfrontend desarrollado en angular versión 15.1.2 y con single-spa en su version 4.0.0. Su principal función es proveer los estilos genéricos de la aplicación. </p>
 
+## Orquestador
+
+<p style='text-align: justify;'> El orquestador de este microfrontend se encuentra en el siguiente <a href="https://github.com/lamatcalderon/mf-root-config">repositorio</a> </p>
 
 ## Servidor de desarrollo
 
